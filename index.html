@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Bootstrap 3 + WYSIHTML5 + Multi Image Upload</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap3-wysihtml5/lib/css/prettify.css"></link>
+		<link rel="stylesheet" href="bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css"></link>
+		<link rel="stylesheet" href="jquery-file-upload/css/jquery.fileupload.css"></link>
+		<link rel="stylesheet" href="wysihtml5-image-upload.css"></link>
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<span class="navbar-brand">Bootstrap 3 + WYSIHTML5 + Multi Image Upload</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+
+			<div class="row">
+				<form role="form">
+					<textarea class="form-control wysihtml5" rows="15"></textarea>
+				</form>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<h2>About</h2>
+					<p>
+						This is a sample page showing Bootstrap Wysihtml5 with a customized image dialog and file upload. The idea and code from the customized image dialog came from <a href="http://rcode5.wordpress.com/2012/11/01/custom-image-upload-modal-with-bootstrap-wysihtml5/comment-page-1">Custom Image Upload Modal with Bootstrap-Wysihtml5</a>. I combined this code with the code of <a href="http://lagoscript.org/jquery/upload">jQuery.upload</a> to add the file upload option.
+					</p>
+					<p>Try it click the image dialog button. Try to insert or upload an images now. Images are not saved in this demo.</p>
+					<p>To use this code you need two server side handlers:</p>
+					<ol>
+						<li>Gives a list of images in json (example imagelist.php)</li>
+						<li>Handles file upload and save the file and returns result in json (example upload.php)</li>
+					</ol>
+				</div>
+
+				<div class="col-md-4">
+					<h2>Download</h2>
+					<p>Please download, comment and fork this code on GitHub</p>
+					<p><a class="btn btn-success" href="http://github.com/bassjobsen/wysihtml5-image-upload/">Download code &raquo;</a></p>
+				</div>
+
+				<div class="col-md-4">
+					<h2>References/Tools:</h2>
+					<ul>
+						<li>
+							<a href='http://rcode5.wordpress.com/2012/11/01/custom-image-upload-modal-with-bootstrap-wysihtml5/'>blog writeup</a>(rcode5)
+						</li>
+						<li>
+							<a href="https://github.com/bassjobsen/jqueryupload">jQuery.upload</a>
+						</li>	  
+						<li>
+							<a href='http://jhollingworth.github.com/bootstrap-wysihtml5/'>bootstrap-wysihtml5</a>
+						</li>
+						<li>
+							<a href='https://github.com/xing/wysihtml5'>wysihtml5</a>
+						</li>
+						<li>
+							<a href='http://twitter.github.com/bootstrap/'>Twitter Bootstrap</a>
+						</li>
+						<li>
+							<a href='http://jquery.com/'>jQuery</a>
+						</li>
+						<li>
+							<a href='http://underscorejs.org/'>underscorejs</a>
+						</li>
+						<li>
+							<a href='http://placeholder.it'>placeholder.it</a>
+						</li>
+						<li>
+							<a href='http://www.opensourcecms.eu/'>OpensourceCMS.EU</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<script src="bootstrap3-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
+		<script src="bootstrap3-wysihtml5/lib/js/jquery-1.10.2.min.js"></script>
+		<script src="bootstrap3-wysihtml5/lib/js/prettify.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+		<script src="jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+		<script src="jquery-file-upload/js/jquery.iframe-transport.js"></script>
+		<script src="jquery-file-upload/js/jquery.fileupload.js"></script>
+		<script src="wysihtml5-image-upload.js"></script>
+
+		<script>
+			$('.wysihtml5').wysihtml5({
+				"font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+				"emphasis": true, //Italics, bold, etc. Default true
+				"lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+				"html": true, //Button which allows you to edit the generated HTML. Default false
+				"link": true, //Button to insert a link. Default true
+				"image": true, //Button to insert an image. Default true,
+				"color": false //Button to change color of font
+			});
+			$(prettyPrint);
+		</script>
+	</body>
+</html>

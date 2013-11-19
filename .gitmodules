@@ -1,0 +1,6 @@
+[submodule "bootstrap3-wysihtml5"]
+	path = bootstrap3-wysihtml5
+	url = git://github.com/fabiopaiva/bootstrap3-wysihtml5.git
+[submodule "jquery-file-upload"]
+	path = jquery-file-upload
+	url = git://github.com/blueimp/jQuery-File-Upload.git

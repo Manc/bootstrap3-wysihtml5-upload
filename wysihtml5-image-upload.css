@@ -1,0 +1,15 @@
+.bootstrap-wysihtml5-insert-image-modal ul.files {
+	list-style: none;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+.bootstrap-wysihtml5-insert-image-modal ul.files li {
+	width: auto;
+	height: 90px;
+	margin: 0 10px 10px 0;
+	float: left;
+}
+.bootstrap-wysihtml5-insert-image-modal ul.files li .close {
+	margin: -5px 0 0 2px;
+}
