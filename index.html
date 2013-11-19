@@ -3,12 +3,36 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Bootstrap 3 + WYSIHTML5 + Multi Image Upload</title>
+
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 		<link rel="stylesheet" href="bootstrap3-wysihtml5/lib/css/prettify.css"></link>
 		<link rel="stylesheet" href="bootstrap3-wysihtml5/src/bootstrap-wysihtml5.css"></link>
 		<link rel="stylesheet" href="jquery-file-upload/css/jquery.fileupload.css"></link>
 		<link rel="stylesheet" href="wysihtml5-image-upload.css"></link>
+
+		<script src="bootstrap3-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
+		<script src="bootstrap3-wysihtml5/lib/js/jquery-1.10.2.min.js"></script>
+		<script src="bootstrap3-wysihtml5/lib/js/prettify.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+		<script src="jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
+		<script src="jquery-file-upload/js/jquery.iframe-transport.js"></script>
+		<script src="jquery-file-upload/js/jquery.fileupload.js"></script>
+		<script src="wysihtml5-image-upload.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.wysihtml5').wysihtml5({
+					"font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+					"emphasis": true, //Italics, bold, etc. Default true
+					"lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+					"html": true, //Button which allows you to edit the generated HTML. Default false
+					"link": true, //Button to insert a link. Default true
+					"image": true, //Button to insert an image. Default true,
+					"color": false //Button to change color of font
+				});
+				$(prettyPrint);
+			});
+		</script>
 	</head>
 	<body>
 		<div class="navbar navbar-default">
@@ -27,27 +51,5 @@
 				</form>
 			</div>
 		</div>
-
-		<script src="bootstrap3-wysihtml5/lib/js/wysihtml5-0.3.0.js"></script>
-		<script src="bootstrap3-wysihtml5/lib/js/jquery-1.10.2.min.js"></script>
-		<script src="bootstrap3-wysihtml5/lib/js/prettify.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-		<script src="jquery-file-upload/js/vendor/jquery.ui.widget.js"></script>
-		<script src="jquery-file-upload/js/jquery.iframe-transport.js"></script>
-		<script src="jquery-file-upload/js/jquery.fileupload.js"></script>
-		<script src="wysihtml5-image-upload.js"></script>
-
-		<script>
-			$('.wysihtml5').wysihtml5({
-				"font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
-				"emphasis": true, //Italics, bold, etc. Default true
-				"lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
-				"html": true, //Button which allows you to edit the generated HTML. Default false
-				"link": true, //Button to insert a link. Default true
-				"image": true, //Button to insert an image. Default true,
-				"color": false //Button to change color of font
-			});
-			$(prettyPrint);
-		</script>
 	</body>
 </html>
